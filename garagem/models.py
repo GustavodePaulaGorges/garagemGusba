@@ -24,6 +24,9 @@ class Cor(models.Model):
 
     def __str__(self):
         return self.descricao
+    
+    class Meta:
+        verbose_name_plural = "Cores"
 
 class Veículo(models.Model):
     marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
