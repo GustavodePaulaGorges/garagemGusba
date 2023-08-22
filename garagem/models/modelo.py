@@ -5,6 +5,6 @@ from .marca import Marca
 
 
 class Modelo(models.Model):
-    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
-    marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
+    categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE, related_name="modelos")
+    marca = models.ForeignKey(Marca, on_delete=models.CASCADE, related_name="modelos")
     nome = models.CharField(max_length=100)
